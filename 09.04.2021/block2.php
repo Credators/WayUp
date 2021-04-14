@@ -2,7 +2,7 @@
 
 $arr = array(2020, 'Ivan', false);
 
-print_r($arr) . '/n';
+print_r($arr);
 
 
 $arr2 = 
@@ -30,7 +30,7 @@ $arr2 =
     ]
 ];
 
-print_r($arr2) . '/n';
+print_r($arr2);
 
 $arr3 = 
 [
@@ -50,7 +50,6 @@ $arr3['db']['port'] = 3309;
 
 print_r($arr3);
 
-?>
 
 
 

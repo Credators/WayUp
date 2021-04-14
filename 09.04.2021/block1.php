@@ -6,5 +6,5 @@ define ('GREETING', '"Здравсвуйте, ');
 
 echo GREETING . $name . '".';
 
-?>
+
 
