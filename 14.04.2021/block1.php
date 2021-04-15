@@ -52,7 +52,7 @@ while ($i < count($todos)){
         $html .= "<td>{$todos[$i]["date"]}</td>";
         $html .= "<td>{$todos[$i]["status"]}</td></tr>";
         $i++;
-};
+}
 
 $html .= "</table>";
 
