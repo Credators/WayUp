@@ -26,10 +26,11 @@ $html = "<table border='1'><th>№</th><th>Описание</th><th>Дата</th
 $html .= "<tr><td colspan='4'><i>Ниже задача выполнена в Foreach</i></td></tr>";
 
 foreach ($todos as $item){
-        $html .= "<tr><td>{$item["id"]}</td>";
-        $html .= "<td>{$item["title"]}</td>";
-        $html .= "<td>{$item["date"]}</td>";
-        $html .= "<td>{$item["status"]}</td></tr>";
+    $html .= "<tr>";
+        foreach ($item as $cell){
+            $html .="<td>{$cell}</td>";
+        }
+        $html .= "</tr>";
     }
 
 $html .= "<tr><td colspan='4'><i>Ниже задача выполнена в цикле For</i></td></tr>";
