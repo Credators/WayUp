@@ -27,11 +27,11 @@ $html .= "<tr><td colspan='4'><i>Ниже задача выполнена в For
 
 foreach ($todos as $item){
     $html .= "<tr>";
-        foreach ($item as $cell){
-            $html .="<td>{$cell}</td>";
-        }
-        $html .= "</tr>";
+    foreach ($item as $cell){
+        $html .="<td>{$cell}</td>";
     }
+    $html .= "</tr>";
+}
 
 $html .= "<tr><td colspan='4'><i>Ниже задача выполнена в цикле For</i></td></tr>";
 
