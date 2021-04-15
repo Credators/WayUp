@@ -1,6 +1,4 @@
 <?php
-/*Переберите и выведите данный массив на страницу в виде готового HTML (также можно использовать стили)
-с помощью циклов for, while и foreach*/
 
 $todos = [
     [
@@ -23,9 +21,9 @@ $todos = [
     ]
 ];
 
-$html = "<table border='1'><th>Номер</th><th>Наименование</th><th>Дата</th><th>Статус</th>";
+$html = "<table border='1'><th>№</th><th>Описание</th><th>Дата</th><th>Статус</th>";
 
-$html .= "<tr><td colspan='4'>Ниже задача выполнена в Foreach</td></tr>";
+$html .= "<tr><td colspan='4'><i>Ниже задача выполнена в Foreach</i></td></tr>";
 
 foreach ($todos as $item){
         $html .= "<tr><td>{$item["id"]}</td>";
@@ -34,7 +32,7 @@ foreach ($todos as $item){
         $html .= "<td>{$item["status"]}</td></tr>";
     }
 
-$html .= "<tr><td colspan='4'>Ниже задача выполнена в цикле For</td></tr>";
+$html .= "<tr><td colspan='4'><i>Ниже задача выполнена в цикле For</i></td></tr>";
 
 for ($i = 0 ; $i < count($todos); $i++){
         $html .= "<tr><td>{$todos[$i]["id"]}</td>";
@@ -43,7 +41,7 @@ for ($i = 0 ; $i < count($todos); $i++){
         $html .= "<td>{$todos[$i]["status"]}</td></tr>";
 }
 
-$html .= "<tr><td colspan='4'>Ниже задача выполнена в цикле While</td></tr>";
+$html .= "<tr><td colspan='4'><i>Ниже задача выполнена в цикле While</i></td></tr>";
 
 $i = 0;
 while ($i < count($todos)){
