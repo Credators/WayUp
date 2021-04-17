@@ -13,9 +13,3 @@
         <p>Описание товара</p>
         <textarea name="description" placeholder="внесите описание товара"></textarea><br>
         <button type="submit">Сохранить</button>
-     </label>
-</form>
-
-
-
-
