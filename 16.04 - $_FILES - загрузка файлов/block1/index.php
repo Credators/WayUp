@@ -1,6 +1,6 @@
 
 <form action="includes/add_product.php" method="post">
-    <label>
+     <label>
         <p>Название товара</p>
         <input type="text" name="product" placeholder="название товара"><br>
         <p>Категория товара</p>
@@ -12,8 +12,8 @@
         <input type="text" name="price" placeholder="цена товара"><br>
         <p>Описание товара</p>
         <textarea name="description" placeholder="внесите описание товара"></textarea><br>
-    </label>
-    <button type="submit">Сохранить</button>
+        <button type="submit">Сохранить</button>
+     </label>
 </form>
 
 
