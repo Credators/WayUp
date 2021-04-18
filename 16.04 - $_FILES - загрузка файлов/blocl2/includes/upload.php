@@ -1,6 +1,8 @@
 <?php
 
 $type = $_FILES["image"]["type"];
+$fileName = $_FILES["image"]["name"];
+$tempName = $_FILES["image"]["tmp_name"];
 
 if($type !== "image/jpeg"){
     if($type !== "image/png") {
@@ -8,7 +10,7 @@ if($type !== "image/jpeg"){
         die;
     }
 }
-$path = "includes" . time() . "_" . $_FILES["image"]["name"];
-move_uploaded_file($_FILES["image"]["tmp_name"],$path);
+$path = uniqid() . "_$fileName";
+move_uploaded_file($tempName,$path);
 echo "Картинка успешно загружена";
 
