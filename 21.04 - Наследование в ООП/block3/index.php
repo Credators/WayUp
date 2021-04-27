@@ -8,7 +8,7 @@ $worker = [
     'age' => 34,
     'profession' => 'web_developer',
 ];
-Workers::create($worker);
+print_r(Workers::create($worker));
 
 Workers::save();
 Workers::all();
