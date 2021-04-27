@@ -18,5 +18,5 @@ $worker1 = [
 
 Worker::create($worker);
 Worker::create($worker1);
-//Worker::all();
+Worker::all();
 Worker::save();

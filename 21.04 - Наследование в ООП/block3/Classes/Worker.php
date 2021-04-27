@@ -31,8 +31,8 @@ class Worker
             $work .= "Age : " . self::$workers[$i]['age'] . "\n";
             $work .= "Email : " . self::$workers[$i]['email'] . "\n";
             $work .= "Profession : " . self::$workers[$i]['profession'] . "\n";
-            file_put_contents("base/workers.txt", $work , FILE_APPEND);
-        }
+            file_put_contents("txt/workers.txt", $work , FILE_APPEND);
+        }echo "Данные успешно записаны";
     }
 
         private static function array_push_assoc($array, $key, $value) // доп. метод для добавления в ассоц. массивa
