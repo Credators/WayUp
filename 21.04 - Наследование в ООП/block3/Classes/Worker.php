@@ -5,7 +5,6 @@ class Worker
 {
     protected static $workers;
 
-
     public static function create($worker)
     {
         foreach ($worker as $item) {
@@ -31,7 +30,7 @@ class Worker
             $work .= "Age : " . self::$workers[$i]['age'] . "\n";
             $work .= "Email : " . self::$workers[$i]['email'] . "\n";
             $work .= "Profession : " . self::$workers[$i]['profession'] . "\n";
-            file_put_contents("txt/workers.txt", $work , FILE_APPEND);
+            file_put_contents("workers.txt", $work , FILE_APPEND);
         }echo "Данные успешно записаны!";
     }
 
