@@ -24,19 +24,17 @@ class Workers
         return self::$workers = [$worker];
     }
 
+    public static function save()
+    {
+        file_put_contents("workers.txt", self::$workers ,FILE_APPEND);
+    }
+
     public static function all()
     {
         echo "Всего работников "  . count(self::$workers) . "<br / >";
         return self::$workers;
     }
-
-    public static function save()
-    {
-
-    }
 }
-
-
 
 
 

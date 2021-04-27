@@ -38,7 +38,7 @@ class Equation
 
     private function x2()
     {
-        return (-$this->b += sqrt($this->discriminant())) / (2 * $this->a);
+        return (-$this->b - sqrt($this->discriminant())) / (2 * $this->a);
     }
 
 }

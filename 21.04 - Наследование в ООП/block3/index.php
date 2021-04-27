@@ -10,4 +10,5 @@ $worker = [
     'register_time' => date("F j, Y, g:i a")
 ];
 Workers::create($worker);
+Workers::save();
 print_r(Workers::all());
