@@ -5,7 +5,8 @@ email (адрес электронной почты), age (возраст) и pr
 
 Полученный массив он должен добавлять в свойство workers,
 заведомо добавив в аргумент $worker поле register_time, в которое нужно занести временную метку, когда пользователь был добавлен в формате
-День-Месяц-Год Час:Минуты. Кроме того, нужно проверять, что все поля в массиве $worker не пустые, в противном случае этот массив
+День-Месяц-Год Час:Минуты.
+Кроме того, нужно проверять, что все поля в массиве $worker не пустые, в противном случае этот массив
 добавлять в свойство workers - не нужно.
 
 Метод all должен возвращать массив с полями workers_count (содержит кол-во воркеров в свойстве workers) и all_workers которое будет
@@ -17,23 +18,39 @@ email (адрес электронной почты), age (возраст) и pr
 class Workers
 {
     private static $workers;
-        //['name', 'email', 'age', 'profession']
+
+    private static function array_push_assoc($array, $key, $value)
+    {
+        $array[$key] = $value;
+        return $array;
+    }
 
     public static function create($worker)
     {
-        return self::$workers = [$worker];
-    }
-
-    public static function save()
-    {
-        file_put_contents("workers.txt", self::$workers ,FILE_APPEND);
+        $arr = self::array_push_assoc($worker, 'register_time', date("Y-m-d H:i:s"));
+        foreach ($arr as $item) {
+            if ($item === '') {
+                echo "Данные не внесены";
+                die;
+            }
+        }
+        self::$workers = $arr;
+        //print_r(self::$workers);
     }
 
     public static function all()
     {
         echo "Всего работников "  . count(self::$workers) . "<br / >";
-        return self::$workers;
+        echo self::$workers;
     }
+
+    public static function save()
+    {
+        $string = self::$workers;
+        file_put_contents("base/workers.txt", $string ,FILE_APPEND);
+    }
+
+
 }
 
 
