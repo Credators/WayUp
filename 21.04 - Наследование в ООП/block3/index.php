@@ -1,14 +1,22 @@
 <?php
 
-require_once 'Classes/Workers.php';
+require_once 'Classes/Worker.php';
 
 $worker = [
-    'name' => 'Alexxxx',
-    'email' => '1@mail.com',
-    'age' => 34,
-    'profession' => 'web_developer',
+    'name' => 'Oleg',
+    'email' => '2@mail.com',
+    'age' => 21,
+    'profession' => 'php_developer',
 ];
-print_r(Workers::create($worker));
 
-Workers::save();
-Workers::all();
+$worker1 = [
+    'name' => 'Saha',
+    'email' => '3@mail.com',
+    'age' => 22,
+    'profession' => 'php_developer',
+];
+
+Worker::create($worker);
+Worker::create($worker1);
+//Worker::all();
+Worker::save();
