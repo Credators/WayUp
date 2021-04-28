@@ -9,13 +9,12 @@ class Worker
 
         foreach ($worker as $item) {
             if (empty($item)) {
-                echo "Внесите все данные!";
+                return;
             }
         }
 
         $worker += ['register_time' => date("Y-m-d H:i:s")];
         self::$workers[] = $worker;
-
     }
 
     public static function all()
@@ -35,7 +34,7 @@ class Worker
             $work .= "Email : " . self::$workers[$i]['email'] . "\n";
             $work .= "Profession : " . self::$workers[$i]['profession'] . "\n";
             file_put_contents("workers.txt", $work , FILE_APPEND);
-        }echo "Данные успешно записаны в файл!" . '<a href="./workers.txt"> открыть ? </a><br>';
+        }echo "Данные успешно записаны в файл!<br>";
     }
 }
 
