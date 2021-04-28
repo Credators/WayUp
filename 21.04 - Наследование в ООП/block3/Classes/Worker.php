@@ -3,7 +3,7 @@
 
 class Worker
 {
-    protected static $workers;
+    public static $workers = [];
 
     public static function create($worker)
     {
@@ -17,9 +17,10 @@ class Worker
     }
     public static function all()
     {
-        echo "Всего пользователей для записи : " . count(self::$workers) . "<br />";
+        $countWorkers = self::$workers;
+        echo "Всего пользователей для записи : " . count($countWorkers) . "<br />";
         echo "<pre>";
-        print_r(self::$workers);
+        print_r($countWorkers);
         echo "</pre>";
     }
 

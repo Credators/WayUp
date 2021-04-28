@@ -1,6 +1,7 @@
 <?php
 
 require_once 'Classes/Worker.php';
+require_once '../block4/Finder.php';
 
 $worker = [
     'name' => 'Oleg',
@@ -18,5 +19,7 @@ $worker1 = [
 
 Worker::create($worker);
 Worker::create($worker1);
-Worker::all();
-Worker::save();
+//Worker::all();
+//Worker::save();
+
+Finder::find($worker['email']);
