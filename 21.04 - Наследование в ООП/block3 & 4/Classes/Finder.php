@@ -1,7 +1,5 @@
 <?php
 
-require_once "../block3/Classes/Worker.php";
-
 class Finder extends Worker
 {
     public static function find($email)
@@ -9,7 +7,7 @@ class Finder extends Worker
         foreach (self::$workers as $value) {
             if(in_array($email, $value, true)) {
                 echo "<pre>";
-                print_r($value);
+                    print_r($value);
                 echo "</pre>";
             }
         }

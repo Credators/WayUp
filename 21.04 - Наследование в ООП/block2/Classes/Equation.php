@@ -17,12 +17,11 @@ class Equation
 
     public function result()
     {
-        $arr = [
+        return [
             "d" => $this->discriminant(),
             "x1"=> $this->x1(),
             "x2"=> $this->x2()
         ];
-        return $arr;
 
     }
 
@@ -42,10 +41,5 @@ class Equation
     }
 
 }
-
-$a = new Equation(3, -14, -5);
-
-print_r($a->result());
-
 
 
