@@ -8,7 +8,9 @@ class Finder extends Worker
     {
         foreach (self::$workers as $value) {
             if(in_array($email, $value, true)) {
+                echo "<pre>";
                 print_r($value);
+                echo "</pre>";
             }
         }
     }

@@ -19,7 +19,7 @@ $worker1 = [
 
 Worker::create($worker);
 Worker::create($worker1);
-//Worker::all();
-//Worker::save();
+Worker::all();
+Worker::save();
 
 Finder::find($worker1['email']);
