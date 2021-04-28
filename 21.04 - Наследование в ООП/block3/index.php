@@ -22,4 +22,4 @@ Worker::create($worker1);
 //Worker::all();
 //Worker::save();
 
-Finder::find($worker['email']);
+Finder::find($worker1['email']);

@@ -1,9 +1,8 @@
 <?php
 
-
 class Worker
 {
-    public static $workers = [];
+    protected static $workers = [];
 
     public static function create($worker)
     {
@@ -35,10 +34,10 @@ class Worker
         }echo "Данные успешно записаны!";
     }
 
-        private static function array_push_assoc($array, $key, $value) // доп. метод для добавления в ассоц. массивa
+        private static function array_push_assoc($arr, $key, $value) // доп. метод для добавления в ассоц. массивa
     {
-        $array[$key] = $value;
-        return $array;
+        $arr[$key] = $value;
+        return $arr;
     }
 }
 

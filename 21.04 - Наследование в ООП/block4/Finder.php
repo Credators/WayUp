@@ -9,7 +9,7 @@ class Finder extends Worker
         foreach (self::$workers as $value) {
             if(in_array($email, $value, true)) {
                 print_r($value);
-            }else echo "введи правильный запрос";
+            }
         }
     }
 }
